@@ -28,6 +28,7 @@ namespace Shooter.Components
         public bool IsFlying = true;
         public TimeSpan SmokeParticleLifespan = TimeSpan.FromSeconds(3);
         Random randomizer = new Random();
+        public Cannon shooter;
 
         // Graphics
         public Texture2D RocketTexture;
@@ -70,6 +71,8 @@ namespace Shooter.Components
             this.Direction *= shooter.Power * shooter.ShotPowerModifier;
             this.RocketColor = shooter.Color;
             this.Scaling = shooter.scaling * CANNON_TO_ROCKET_SCALING_FACTOR;
+
+            this.shooter = shooter;
 
             Initialize();
         }

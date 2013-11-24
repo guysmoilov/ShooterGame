@@ -246,7 +246,7 @@ namespace Shooter.Scenes
                 {
                     for (int j = 0; j < cannons.Count; j++)
 			        {
-                        if (cannons[j].Enabled)
+                        if (cannons[j].Enabled && cannons[j] != Rockets[i].shooter)
                         {
                             var collision = RocketCannonCollisionTest(Rockets[i], cannons[j]);
 
@@ -254,6 +254,7 @@ namespace Shooter.Scenes
                             {
                                 Rockets[i].IsFlying = false;
 
+                                // Create explosion
                                 var exp = new Explosion(Game);
                                 exp.ParticleNum = EXPLOSION_PARTICLE_NUM;
                                 exp.Position = Rockets[i].Position;
@@ -265,11 +266,26 @@ namespace Shooter.Scenes
 
                                 Explosions.Add(exp);
                                 SceneComponents.Add(exp);
+
+                                // Destroy cannon
+                                DestroyCannon(j);
                             } 
                         }
 			        }
                 }
             }
+        }
+
+        public virtual void DestroyCannon(int cannonNum)
+        {
+            // Check if need to switch
+            if (cannonNum == ActivePlayer)
+            {
+                CyclePlayer();
+            }
+
+            this.SceneComponents.Remove(cannons[cannonNum]);
+            this.cannons.RemoveAt(cannonNum);
         }
 
         public virtual Vector2 RocketCannonCollisionTest(Rocket rocket, Cannon cannon)
@@ -281,7 +297,7 @@ namespace Shooter.Scenes
                 Matrix.CreateTranslation(new Vector3(rocket.Position.X, rocket.Position.Y, 0f));
 
             Matrix carriageMatrix =
-                Matrix.CreateTranslation(new Vector3(0, cannon.carriageTexture.Height, 0)) *
+                Matrix.CreateTranslation(new Vector3(0, -cannon.carriageTexture.Height, 0)) *
                 Matrix.CreateScale(cannon.scaling) *
                 Matrix.CreateTranslation(new Vector3(cannon.Position, 0));
 
