@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>background.jpg</Source>
+      <Name>background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\Shooter\bin\x86\Debug\Content\background.xnb</Output>
+      <Time>2013-11-16T21:24:08.84375+02:00</Time>
+    </Item>
+    <Item>
+      <Source>cannon.png</Source>
+      <Name>cannon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\Shooter\bin\x86\Debug\Content\cannon.xnb</Output>
+      <Time>2013-11-16T21:24:08.84375+02:00</Time>
+    </Item>
+    <Item>
+      <Source>carriage.png</Source>
+      <Name>carriage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\Shooter\bin\x86\Debug\Content\carriage.xnb</Output>
+      <Time>2013-11-16T21:24:08.875+02:00</Time>
+    </Item>
+    <Item>
+      <Source>explosion.png</Source>
+      <Name>explosion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\Shooter\bin\x86\Debug\Content\explosion.xnb</Output>
+      <Time>2013-11-16T21:24:08.890625+02:00</Time>
+    </Item>
+    <Item>
+      <Source>ground.jpg</Source>
+      <Name>ground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\Shooter\bin\x86\Debug\Content\ground.xnb</Output>
+      <Time>2013-11-16T21:24:08.90625+02:00</Time>
+    </Item>
+    <Item>
+      <Source>rocket.png</Source>
+      <Name>rocket</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\Shooter\bin\x86\Debug\Content\rocket.xnb</Output>
+      <Time>2013-11-16T21:24:08.953125+02:00</Time>
+    </Item>
+    <Item>
+      <Source>smoke.png</Source>
+      <Name>smoke</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\Shooter\bin\x86\Debug\Content\smoke.xnb</Output>
+      <Time>2013-11-16T21:24:08.953125+02:00</Time>
+    </Item>
+    <Item>
+      <Source>hitcannon.wav</Source>
+      <Name>hitcannon</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\Shooter\bin\x86\Debug\Content\hitcannon.xnb</Output>
+      <Time>2013-11-16T21:24:08.921875+02:00</Time>
+    </Item>
+    <Item>
+      <Source>hitterrain.wav</Source>
+      <Name>hitterrain</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\Shooter\bin\x86\Debug\Content\hitterrain.xnb</Output>
+      <Time>2013-11-16T21:24:08.921875+02:00</Time>
+    </Item>
+    <Item>
+      <Source>launch.wav</Source>
+      <Name>launch</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\Shooter\bin\x86\Debug\Content\launch.xnb</Output>
+      <Time>2013-11-16T21:24:08.921875+02:00</Time>
+    </Item>
+    <Item>
+      <Source>myFont.spritefont</Source>
+      <Name>myFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\Shooter\bin\x86\Debug\Content\myFont.xnb</Output>
+      <Time>2013-11-23T23:43:42.625+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Point.bmp</Source>
+      <Name>Point</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Point.xnb</Output>
+      <Time>2013-11-23T12:02:58.796875+02:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\ShooterContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\Shooter\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\ShooterContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Documents and Settings\user\My Documents\College\משחקי מחשב\Shooter\Shooter\Shooter\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2013-10-22T20:54:53.046875+03:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
