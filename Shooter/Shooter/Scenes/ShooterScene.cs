@@ -110,12 +110,21 @@ namespace Shooter.Scenes
                 cannons[i].Angle = MathHelper.ToRadians(90);
                 cannons[i].Power = 100;
                 cannons[i].Position = new Vector2();
-                cannons[i].Position.X = (screenWidth / (numOfCannons + 1) * (i + 1));
-                cannons[i].Position.Y = terrain.Contour[(int)cannons[i].Position.X];
                 cannons[i].Width = CANNON_WIDTH;
             }
 
+            SetCannonPositions();
+
             cannons[ActivePlayer].IsActive = true;
+        }
+
+        public virtual void SetCannonPositions()
+        {
+            for (int i = 0; i < cannons.Count; i++)
+            {
+                cannons[i].Position.X = (screenWidth / (numOfCannons + 1) * (i + 1));
+                cannons[i].Position.Y = terrain.Contour[(int)cannons[i].Position.X];
+            }
         }
 
         public virtual void FlattenTerrainBelowPlayers()
@@ -210,6 +219,8 @@ namespace Shooter.Scenes
                     if (collision != new Vector2(-1))
                     {
                         Rockets[i].IsFlying = false;
+
+                        // Create explosion
                         var exp = new Explosion(Game);
                         exp.ParticleNum = EXPLOSION_PARTICLE_NUM;
                         exp.Position = Rockets[i].Position;
@@ -220,6 +231,9 @@ namespace Shooter.Scenes
 
                         Explosions.Add(exp);
                         SceneComponents.Add(exp);
+
+                        // Add crater
+                        AddCrater(terrain, exp.Position, exp.ExplosionSize);
                     }
                 }
             }
@@ -236,6 +250,40 @@ namespace Shooter.Scenes
             Matrix terrainMat = Matrix.Identity;
 
             return TextureHelper.TexturesCollide(rocket.RocketColorArray, rocketMatrix, terrain.ForegroundColorArray, terrainMat);
+        }
+
+        public virtual void AddCrater(Terrain terrain, Vector2 craterCenter, float craterRadius)
+        {
+            for (int i = (int)(craterCenter.X - craterRadius); i < craterCenter.X + craterRadius; i++)
+            {
+                for (int j = (int)(craterCenter.Y - craterRadius); j < craterCenter.Y + craterRadius; j++)
+                {
+                    // Check bounds
+                    if (i >= 0 && i < terrain.Contour.Length && j >= 0 && j < screenHeight)
+                    {
+                        var currentPos = new Vector2(i, j);
+                        var difvec = craterCenter - currentPos;
+
+                        // Check if in crater radius
+                        if (difvec.Length() <= craterRadius)
+                        {
+                            // Check if the contour is higher
+                            if (terrain.Contour[i] < currentPos.Y)
+                            {
+                                terrain.Contour[i] = (int)currentPos.Y;
+                            }
+                        }
+                    }
+                }
+            }
+            // Re-position cannons
+            SetCannonPositions();
+
+            // Flatten ground below cannons
+            FlattenTerrainBelowPlayers();
+
+            // Update terrain
+            terrain.CreateForeground(screenHeight);
         }
 
         public virtual void CheckRocketCannonHit()
